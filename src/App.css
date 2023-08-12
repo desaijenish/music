@@ -1,0 +1,69 @@
+.backgroud {
+  width: 100%;
+  height: 940px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+  background-image: url("./aseat/musicImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.musicplayerbox {
+  width: 300px;
+  padding: 30px;
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba(87, 87, 87, 0.37);
+  backdrop-filter: blur( 4.5px );
+  -webkit-backdrop-filter: blur( 4.5px );
+  border-radius: 20px;
+  border: 10px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.flex {
+  display: flex;
+}
+
+.musicplaylist{
+  border-radius: 0px;
+  background: #e0e0e0;
+  box-shadow:  -8px -8px 28px #d9d9d9,
+               -8px -8px 28px #e7e7e7;
+             z-index: 1;
+             overflow:scroll;
+             width: 20%;
+             height: 100vh;
+}
+
+
+.dancing-circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.dancer {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000; 
+  border-radius: 50%;
+  animation: danceAnimation 5s linear infinite;
+}
+
+@keyframes danceAnimation {
+  0% {
+    transform: translateX(0) translateY(-150px);
+  }
+  100% {
+    transform: translateX(0) translateY(-150px) rotate(360deg);
+  }
+}
+
+@media (max-width:1024px) {
+  .musicplaylist{
+    width: 35%;
+  }
+}
